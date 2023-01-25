@@ -1,0 +1,7 @@
+POST http://localhost:3000/api/postNote
+Content-Type: application/json
+
+{
+    "title": "Eii",
+    "content": "Holaa que tal"
+}
