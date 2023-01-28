@@ -1,7 +1,7 @@
-POST http://localhost:3000/api/postNote
+POST https://api-notes-production.up.railway.app/api/postNote
 Content-Type: application/json
 
 {
-    "title": "Eii",
-    "content": "Holaa que tal"
+    "title": "Una nota",
+    "content": "Utilitzant railway"
 }

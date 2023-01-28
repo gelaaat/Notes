@@ -4,7 +4,7 @@ import Note from '../models/Note.js'
 export const getAllNotes = async (req, res) => {
     try{
         Note.find().then(result =>{
-            console.log(result);
+            res.json(result)
         });
     }
     catch(err){
