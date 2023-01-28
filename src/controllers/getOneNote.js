@@ -1,11 +1,14 @@
 import Note from "../models/Note.js";
 
-export const getOneNote = async (req, res)=> {
-    try {
-        const note = Note.findById(req.params.id);
-        res.send(note);
-    } catch (error) {
-        res.send('Note not founded');
-    }
+export const getOneNote = (req, res) => {
+
+        Note.findById(req.params.id).then(note =>{
+            res.json({note})
+        }).catch(err =>{
+            res.json({
+                message: 'Bad id'
+            })
+        })
+        
 
 }

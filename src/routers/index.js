@@ -1,7 +1,7 @@
 import express from 'express';
-import { getAllNotes } from './getAllNotes.js';
+import { getAllNotes } from '../controllers/getAllNotes.js';
 import { postNote } from '../controllers/postNote.js';
-import { getOneNote } from './getOneNote.js';
+import { getOneNote } from '../controllers/getOneNote.js';
 import { deleteNote } from '../controllers/deleteNote.js';
 
 const router = express.Router()

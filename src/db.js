@@ -14,7 +14,7 @@ export const db = async () => {
         console.log(err);
         console.log('Something goes wrong with MongoDb connection');
     })
-}
+};
 
 process.on('uncaughtException', error => {
     console.error(error)

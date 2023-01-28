@@ -1,6 +1,6 @@
 import Note from '../models/Note.js';
 
-export const postNote = async (req, res) => {
+export const postNote = (req, res) => {
 
     const { title, content } = req.body;
     const newNote = new Note({
@@ -9,7 +9,7 @@ export const postNote = async (req, res) => {
         date: new Date(),
     });
 
-    await newNote.save().then((note) => {
+    newNote.save().then((note) => {
         res.send(newNote);
     }).catch(() => {
         console.log('error creant la nova nota');
