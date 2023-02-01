@@ -4,7 +4,7 @@ export const deleteNote = (req, res, next) => {
     const { id } = req.params
     
     Note.findByIdAndDelete(id).then((note) => {
-        
+        res.status(200);
         res.json({message: 'Note Eliminated'});
 
     }).catch(err => {

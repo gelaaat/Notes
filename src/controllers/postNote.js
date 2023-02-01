@@ -10,7 +10,9 @@ export const postNote = (req, res) => {
     });
 
     newNote.save().then((note) => {
+        res.status(201);
         res.send(newNote);
+
     }).catch(() => {
         console.log('error creant la nova nota');
     });
