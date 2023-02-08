@@ -2,6 +2,7 @@ POST http://localhost:3000/api/postNote
 Content-Type: application/json
 
 {
-    "title": "Una nota",
-    "content": "kdsbjaskdbadskfdas"
+    "title": "Tercer Nota",
+    "content": "AMB USUARI encriptat",
+    "userId": "63e418fc715f146859b80ebf"
 }
