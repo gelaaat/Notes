@@ -1,9 +1,15 @@
 import Note from '../models/Note.js';
 import User from '../models/User.js';
+import jwt from 'jsonwebtoken';
 
 export const postNote = async (req, res) => {
 
-    const { title, content, userId } = req.body;
+    const { title, content } = req.body;
+
+    let token = req.session.token || req.get('Authorization').substring(7);
+
+    const { userId } = jwt.decode(token)
+
     const user = await User.findById(userId);
 
     const newNote = new Note({

@@ -11,9 +11,9 @@ export const getUserNotes = async (req, res, next) =>{
         res.status(200).send(user.notes)
 
     } catch (error) {
-        res.json({
+        res.send(JSON.stringify({
             message: 'error getting the user notes'
-        })
+        }));
     }
     
 
